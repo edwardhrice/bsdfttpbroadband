@@ -1,0 +1,18 @@
+{
+  "parish": "Barton St David",
+  "county": "Somerset",
+  "postcodes": [
+    "TA11 6AT", "TA11 6BF", "TA11 6BJ", "TA11 6BL", "TA11 6BN",
+    "TA11 6BP", "TA11 6BS", "TA11 6BU", "TA11 6BW", "TA11 6BX",
+    "TA11 6BY", "TA11 6BZ", "TA11 6DA", "TA11 6DB", "TA11 6DD",
+    "TA11 6DE", "TA11 6DF", "TA11 6DH", "TA11 6DJ", "TA11 6GS"
+  ],
+  "source": {
+    "collection_api": "https://www.gov.uk/api/content/government/collections/open-market-review-omr-determinations-and-bduk-plans",
+    "publication_title_pattern": "OMR and premises in BDUK plans",
+    "attachment_title_pattern": "South West",
+    "csv_member_pattern": "south_west_somerset\\.csv$",
+    "os_open_uprn_downloads": "https://api.os.uk/downloads/v1/products/OpenUPRN/downloads"
+  },
+  "checker_url": "https://www.check-gigabit-broadband-availability.service.gov.uk/"
+}
