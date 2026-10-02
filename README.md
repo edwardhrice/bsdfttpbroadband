@@ -1,6 +1,6 @@
 # Gigabit broadband in Barton St David
 
-A community project supporting Barton St David Parish Council's campaign to bring full-fibre (FTTP) broadband to the village. It publishes, and automatically keeps up to date, the government's premises-level gigabit availability and plans for every premises in the parish.
+A page created by Edward Rice supporting Barton St David Parish Council's campaign to bring full-fibre (FTTP) broadband to the village. It publishes, and automatically keeps up to date, the government's premises-level gigabit availability and plans for every premises in the parish.
 
 - **Site:** published from `docs/` with GitHub Pages (see [Enabling Pages](#enabling-github-pages)).
 - **Data:** [`data/`](data/) – `premises.csv`, `summary.json`, `history.csv`, `uprn_coords.csv`.
