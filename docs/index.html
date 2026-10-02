@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Gigabit broadband in Barton St David</title>
+<meta name="description" content="Which premises in Barton St David parish, Somerset, can get gigabit broadband now, and which are planned, from official BDUK data.">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <p class="eyebrow">Barton St David parish, Somerset</p>
+    <h1>Gigabit broadband in Barton St David</h1>
+    <p class="lede">A community project supporting Barton St David Parish Council's campaign to bring full-fibre (FTTP) broadband to the village. It shows, for every premises in the parish, what the government's own data says about gigabit availability and plans.</p>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+  <noscript><p class="notice">This page needs JavaScript to show the figures, chart and map. The raw data is in the <a href="https://github.com/edwardhrice/bsdfttpbroadband/tree/main/data">data folder</a>.</p></noscript>
+
+  <p class="meta" id="meta">Loading…</p>
+
+  <section aria-labelledby="h-headline">
+    <h2 id="h-headline">At a glance</h2>
+    <p class="headline" id="headline"></p>
+    <ul class="tiles" id="tiles"></ul>
+  </section>
+
+  <section class="notice" aria-labelledby="h-caveat">
+    <h2 id="h-caveat">Please read: these are plans, not promises</h2>
+    <p>The government body that publishes this data, Building Digital UK (BDUK), describes the plans as provisional. Premises marked <strong>"not yet confirmed"</strong> are under review and may be removed from the Project Gigabit scope. Dates can slip. BDUK does not guarantee the accuracy of the data, and it can be wrong for individual premises. If your premises is shown incorrectly, check it with the official checker below.</p>
+  </section>
+
+  <section aria-labelledby="h-check">
+    <h2 id="h-check">Check your own address</h2>
+    <p>The official checker looks up a single address and is the best place to confirm your own situation.</p>
+    <p><a class="button" href="https://www.check-gigabit-broadband-availability.service.gov.uk/" rel="noopener">Open the government's gigabit checker</a></p>
+  </section>
+
+  <section aria-labelledby="h-map">
+    <h2 id="h-map">Map of premises</h2>
+    <p class="hint">Each dot is one premises (a UPRN), shown at its Ordnance Survey reference point. Tap a key item to show or hide it, and tap a dot for details. No addresses are published.</p>
+    <div class="legend" id="legend" role="group" aria-label="Map key"></div>
+    <div id="map" role="application" aria-label="Map of premises in Barton St David coloured by gigabit status"></div>
+    <p class="hint" id="map-note"></p>
+  </section>
+
+  <section aria-labelledby="h-time">
+    <h2 id="h-time">Change over time</h2>
+    <p class="hint">Number of premises in each status in each BDUK release. Releases come about every four months.</p>
+    <div id="chart"></div>
+    <details>
+      <summary>Show the chart as a table</summary>
+      <div class="table-wrap"><table id="history-table"></table></div>
+    </details>
+  </section>
+
+  <section aria-labelledby="h-gis">
+    <h2 id="h-gis">Project Gigabit plans</h2>
+    <div id="gis"></div>
+  </section>
+
+  <section aria-labelledby="h-pc">
+    <h2 id="h-pc">By postcode</h2>
+    <div class="table-wrap"><table id="pc-table"></table></div>
+  </section>
+
+  <section aria-labelledby="h-def">
+    <h2 id="h-def">What the statuses mean</h2>
+    <dl class="defs" id="defs"></dl>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Contains public sector information licensed under the Open Government Licence v3.0. Contains OS data &copy; Crown copyright and database right <span id="osyear">2026</span>.</p>
+    <p>Source: <a href="https://www.gov.uk/government/collections/open-market-review-omr-determinations-and-bduk-plans">BDUK, Open Market Review determinations and premises in BDUK plans</a>; coordinates from Ordnance Survey OS Open UPRN. Map &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
+    <p>This is an unofficial community project, not government advice. Code and method: <a href="https://github.com/edwardhrice/bsdfttpbroadband">GitHub repository</a>. Data in the repository: OGL v3.0. Code: MIT.</p>
+  </div>
+</footer>
+
+<script src="vendor/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

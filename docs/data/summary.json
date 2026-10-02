@@ -1,0 +1,188 @@
+{
+  "parish": "Barton St David",
+  "release": {
+    "content_id": "dc4048ee-266a-4680-9265-6f870d0f2b23",
+    "title": "May 2026 OMR and premises in BDUK plans (England and Wales)",
+    "data_month": "May 2026",
+    "published": "2026-09-17",
+    "page_url": "https://www.gov.uk/government/publications/may-2026-omr-and-premises-in-bduk-plans-england-and-wales",
+    "zip_url": "https://assets.publishing.service.gov.uk/media/6aa9a7f1ce3f006bd4346aef/2026-09-10_zipped_files_release_south_west.zip",
+    "user_guide_url": "https://www.gov.uk/government/publications/may-2026-omr-and-premises-in-bduk-plans-england-and-wales/uprn-level-release-user-guide-and-technical-note-for-premises-in-bduk-plans"
+  },
+  "checked_at": "2026-10-02T18:40:15Z",
+  "total_premises": 266,
+  "recognised_premises": 262,
+  "by_status": {
+    "Available now": 9,
+    "Planned – Project Gigabit": 29,
+    "Planned – commercial": 0,
+    "Not planned": 224,
+    "Not counted by BDUK": 4
+  },
+  "by_subsidy_status": {
+    "Gigabit Grey/Black": 9,
+    "Gigabit Under Review": 29,
+    "Gigabit White": 228
+  },
+  "by_postcode": {
+    "TA11 6AT": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 0,
+      "Planned – commercial": 0,
+      "Not planned": 5,
+      "Not counted by BDUK": 0
+    },
+    "TA11 6BF": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 0,
+      "Planned – commercial": 0,
+      "Not planned": 4,
+      "Not counted by BDUK": 0
+    },
+    "TA11 6BJ": {
+      "Available now": 1,
+      "Planned – Project Gigabit": 0,
+      "Planned – commercial": 0,
+      "Not planned": 0,
+      "Not counted by BDUK": 0
+    },
+    "TA11 6BL": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 0,
+      "Planned – commercial": 0,
+      "Not planned": 1,
+      "Not counted by BDUK": 0
+    },
+    "TA11 6BN": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 0,
+      "Planned – commercial": 0,
+      "Not planned": 4,
+      "Not counted by BDUK": 0
+    },
+    "TA11 6BP": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 0,
+      "Planned – commercial": 0,
+      "Not planned": 6,
+      "Not counted by BDUK": 0
+    },
+    "TA11 6BS": {
+      "Available now": 1,
+      "Planned – Project Gigabit": 0,
+      "Planned – commercial": 0,
+      "Not planned": 20,
+      "Not counted by BDUK": 0
+    },
+    "TA11 6BU": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 0,
+      "Planned – commercial": 0,
+      "Not planned": 26,
+      "Not counted by BDUK": 0
+    },
+    "TA11 6BW": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 0,
+      "Planned – commercial": 0,
+      "Not planned": 11,
+      "Not counted by BDUK": 0
+    },
+    "TA11 6BX": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 0,
+      "Planned – commercial": 0,
+      "Not planned": 2,
+      "Not counted by BDUK": 0
+    },
+    "TA11 6BY": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 0,
+      "Planned – commercial": 0,
+      "Not planned": 20,
+      "Not counted by BDUK": 0
+    },
+    "TA11 6BZ": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 0,
+      "Planned – commercial": 0,
+      "Not planned": 24,
+      "Not counted by BDUK": 0
+    },
+    "TA11 6DA": {
+      "Available now": 7,
+      "Planned – Project Gigabit": 0,
+      "Planned – commercial": 0,
+      "Not planned": 19,
+      "Not counted by BDUK": 1
+    },
+    "TA11 6DB": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 2,
+      "Planned – commercial": 0,
+      "Not planned": 4,
+      "Not counted by BDUK": 2
+    },
+    "TA11 6DD": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 12,
+      "Planned – commercial": 0,
+      "Not planned": 0,
+      "Not counted by BDUK": 0
+    },
+    "TA11 6DE": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 0,
+      "Planned – commercial": 0,
+      "Not planned": 8,
+      "Not counted by BDUK": 0
+    },
+    "TA11 6DF": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 10,
+      "Planned – commercial": 0,
+      "Not planned": 41,
+      "Not counted by BDUK": 1
+    },
+    "TA11 6DH": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 0,
+      "Planned – commercial": 0,
+      "Not planned": 12,
+      "Not counted by BDUK": 0
+    },
+    "TA11 6DJ": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 0,
+      "Planned – commercial": 0,
+      "Not planned": 16,
+      "Not counted by BDUK": 0
+    },
+    "TA11 6GS": {
+      "Available now": 0,
+      "Planned – Project Gigabit": 5,
+      "Planned – commercial": 0,
+      "Not planned": 1,
+      "Not counted by BDUK": 0
+    }
+  },
+  "project_gigabit": {
+    "premises": 29,
+    "under_review": 29,
+    "suppliers": [
+      "Wessex Internet Ltd"
+    ],
+    "final_coverage_dates": [
+      "2029-09-30"
+    ],
+    "contract_scopes": [
+      "Initial"
+    ]
+  },
+  "vouchers": [
+    {
+      "postcode": "TA11 6BJ",
+      "supplier": "Openreach Limited"
+    }
+  ]
+}

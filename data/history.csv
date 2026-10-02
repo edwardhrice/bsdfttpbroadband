@@ -1,0 +1,6 @@
+release_id,data_month,published,total_premises,recognised_premises,available_now,planned_project_gigabit,planned_commercial,not_planned,not_counted,subsidy_white,subsidy_under_review,subsidy_grey_black
+abe79ae8-f575-4b3f-81bd-f8f6d23102e2,January 2025,2025-07-01,264,261,6,0,0,255,3,250,8,6
+9ae5b669-bea2-4acd-9333-a99629738f2f,May 2025,2025-09-12,265,262,9,0,0,253,3,249,7,9
+bddd0ce2-41b6-4c75-8d74-182bfadd6f61,September 2025,2026-02-02,264,262,9,0,0,253,2,251,4,9
+855c03e2-7159-454f-8d30-88bcaad159bb,January 2026,2026-06-04,266,262,9,29,0,224,4,256,1,9
+dc4048ee-266a-4680-9265-6f870d0f2b23,May 2026,2026-09-17,266,262,9,29,0,224,4,228,29,9
