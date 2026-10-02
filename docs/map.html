@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Map – gigabit broadband in Barton St David</title>
+<link rel="stylesheet" href="vendor/leaflet.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="map.css">
+</head>
+<body class="fullmap">
+<header class="bar">
+  <a class="back" href="./">&larr; Back to summary</a>
+  <h1>Barton St David: gigabit broadband by premises</h1>
+  <p class="bar-meta" id="meta"></p>
+  <div class="tools" role="group" aria-label="Display options">
+    <button type="button" id="smaller" aria-label="Smaller text">A&minus;</button>
+    <output id="scale" aria-live="polite">100%</output>
+    <button type="button" id="larger" aria-label="Larger text">A+</button>
+    <button type="button" id="reset" aria-label="Reset text size">Reset</button>
+    <button type="button" id="fs" aria-pressed="false">Full screen</button>
+  </div>
+</header>
+<main>
+  <div id="map" role="application" aria-label="Map of premises in Barton St David coloured by gigabit status"></div>
+  <div class="map-legend" id="legend" role="group" aria-label="Map key"></div>
+</main>
+<script src="vendor/leaflet.js"></script>
+<script src="map.js"></script>
+</body>
+</html>

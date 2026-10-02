@@ -3,6 +3,7 @@
 A page created by Edward Rice supporting Barton St David Parish Council's campaign to bring full-fibre (FTTP) broadband to the village. It publishes, and automatically keeps up to date, the government's premises-level gigabit availability and plans for every premises in the parish.
 
 - **Site:** published from `docs/` with GitHub Pages (see [Enabling Pages](#enabling-github-pages)).
+- **Full-screen map:** `docs/map.html`, built for projectors: text size adjustable (A−/A+, or the `+`/`-`/`0` keys; remembered per browser) and a full-screen button.
 - **Data:** [`data/`](data/) – `premises.csv`, `summary.json`, `history.csv`, `uprn_coords.csv`.
 
 ## Source
