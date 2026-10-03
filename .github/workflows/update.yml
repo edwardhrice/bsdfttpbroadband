@@ -52,8 +52,13 @@ jobs:
             exit 0
           fi
           release=$(python -c "import json; print(json.load(open('data/release.json'))['title'])")
+          if git status --porcelain data docs | grep -qv 'last_check.json'; then
+            msg="Update data: ${release}"
+          else
+            msg="Weekly check: no new release"
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data docs
-          git commit -m "Update data: ${release}"
+          git commit -m "${msg}"
           git push

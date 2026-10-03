@@ -153,6 +153,22 @@ class OutputsAndPrivacy(unittest.TestCase):
                                  text=True).stdout.strip()
         self.assertEqual(tracked, "")
 
+    def test_last_check_is_written_and_mirrored_to_site(self):
+        from datetime import datetime, timezone
+        from broadband import site
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            old = (C.LAST_CHECK_JSON, C.DOCS_DATA)
+            C.LAST_CHECK_JSON, C.DOCS_DATA = Path(d) / "last_check.json", Path(d) / "docs"
+            try:
+                site.write_last_check("abc", datetime(2026, 10, 5, 6, 17, tzinfo=timezone.utc))
+                a = json.loads(C.LAST_CHECK_JSON.read_text())
+                b = json.loads((C.DOCS_DATA / "last_check.json").read_text())
+            finally:
+                C.LAST_CHECK_JSON, C.DOCS_DATA = old
+        self.assertEqual(a, b)
+        self.assertEqual(a, {"last_checked": "2026-10-05T06:17:00Z", "release_id": "abc"})
+
 
 if __name__ == "__main__":
     unittest.main()

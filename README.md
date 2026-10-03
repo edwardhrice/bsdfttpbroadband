@@ -40,7 +40,7 @@ Applied in this order; the first rule that matches wins.
 
 BDUK plans are provisional. Premises under review may be removed from Project Gigabit scope, dates can change, and BDUK does not guarantee the accuracy of the data. The site says so, and links to the [official checker](https://www.check-gigabit-broadband-availability.service.gov.uk/) for individual addresses.
 
-The site's "last rebuilt" date is the last time new data was committed. The weekly check commits nothing when there is no new release.
+Every weekly run writes `data/last_check.json` (and a copy in `docs/data/`) with the time of the check, so the site's "Last checked" date is genuine and the run always makes a small commit. Data files only change when there is a new release.
 
 ## Automation
 
