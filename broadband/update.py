@@ -13,7 +13,7 @@ from . import config as C
 from .build import build_outputs, history_row, upsert_history, map_rows
 from .fetch import parish_rows
 from .release import latest_release, list_releases, resolve_release
-from .site import build_site
+from .site import build_site, write_last_check
 from .status import summarise
 
 
@@ -48,7 +48,8 @@ def main(argv=None):
     release = latest_release(cfg)
     fetch_url = args.zip or release["zip_url"]
     if not args.force and not args.zip and stored_release().get("content_id") == release["content_id"]:
-        print(f"No new release: {release['title']} is already built. Nothing to do.")
+        write_last_check(release["content_id"])
+        print(f"No new release: {release['title']} is already built. Recorded the check date.")
         return 0
 
     print(f"Building from {release['title']} ({release['published']})")
@@ -63,6 +64,7 @@ def main(argv=None):
     if args.backfill:
         backfill(cfg, release["content_id"])
     n = build_site()
+    write_last_check(release["content_id"])
     print(f"{summary['total_premises']} premises, {n} with map coordinates")
     return 0
 

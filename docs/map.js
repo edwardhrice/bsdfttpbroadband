@@ -76,9 +76,10 @@
   });
 
   // ---- map ----
-  function build(points, summary) {
+  function build(points, summary, lastCheck) {
     var m = summary.release;
     $("meta").textContent = m.data_month + " BDUK release, published " + fmtDate(m.published) +
+      ". Last checked " + fmtDate((lastCheck && lastCheck.last_checked) || summary.checked_at) +
       ". Plans are provisional and BDUK does not guarantee accuracy. Source: BDUK (OGL v3.0); contains OS data © Crown copyright and database right " +
       new Date(summary.checked_at).getUTCFullYear() + ".";
     if (typeof L === "undefined") { $("map").textContent = "The map could not be loaded."; return; }
@@ -124,7 +125,8 @@
 
   Promise.all([
     fetch("data/summary.json").then(function (r) { return r.json(); }),
-    fetch("data/points.json").then(function (r) { return r.json(); })
-  ]).then(function (r) { build(r[1], r[0]); })
+    fetch("data/points.json").then(function (r) { return r.json(); }),
+    fetch("data/last_check.json").then(function (r) { return r.json(); }).catch(function () { return null; })
+  ]).then(function (r) { build(r[1], r[0], r[2]); })
     .catch(function () { $("meta").textContent = "Sorry, the data could not be loaded."; });
 })();

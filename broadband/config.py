@@ -11,6 +11,7 @@ PRIVATE = ROOT / "private"
 
 PREMISES_CSV = DATA / "premises.csv"
 SUMMARY_JSON = DATA / "summary.json"
+LAST_CHECK_JSON = DATA / "last_check.json"
 HISTORY_CSV = DATA / "history.csv"
 RELEASE_JSON = DATA / "release.json"
 COORDS_CSV = DATA / "uprn_coords.csv"

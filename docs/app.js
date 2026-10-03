@@ -44,12 +44,12 @@
     });
   }
 
-  function renderMeta(s) {
+  function renderMeta(s, lc) {
     $("meta").textContent = "";
     $("meta").appendChild(document.createTextNode("Data: "));
     $("meta").appendChild(el("a", { href: s.release.page_url, text: s.release.data_month + " BDUK release" }));
     $("meta").appendChild(document.createTextNode(", published " + fmtDate(s.release.published) +
-      ". Site last rebuilt " + fmtDate(s.checked_at) + "."));
+      ". Last checked for a new release " + fmtDate((lc && lc.last_checked) || s.checked_at) + "."));
     $("osyear").textContent = new Date(s.checked_at).getUTCFullYear();
   }
 
@@ -228,10 +228,10 @@
       : "";
   }
 
-  Promise.all([getJSON("data/summary.json"), getText("data/history.csv"), getJSON("data/points.json")])
+  Promise.all([getJSON("data/summary.json"), getText("data/history.csv"), getJSON("data/points.json"), getJSON("data/last_check.json").catch(function () { return null; })])
     .then(function (r) {
       var s = r[0];
-      renderMeta(s); renderHeadline(s); renderGis(s); renderPostcodes(s); renderDefs();
+      renderMeta(s, r[3]); renderHeadline(s); renderGis(s); renderPostcodes(s); renderDefs();
       renderChart(parseCSV(r[1]));
       renderMap(r[2], s);
     })
