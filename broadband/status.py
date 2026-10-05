@@ -24,7 +24,7 @@ PREMISES_COLUMNS = [
     "subsidy_control_status", "current_gigabit", "future_gigabit",
     "bduk_vouchers", "voucher_supplier",
     "bduk_gis", "gis_supplier", "gis_final_coverage_date",
-    "gis_contract_scope", "gis_contract_name", "gis_confirmation",
+    "gis_contract_scope", "gis_contract_name",
     "subsidy_note",
 ]
 
@@ -50,7 +50,6 @@ def map_status(row):
         "gis_final_coverage_date": "",
         "gis_contract_scope": "",
         "gis_contract_name": "",
-        "gis_confirmation": "",
         "subsidy_note": "",
     }
     if not out["bduk_recognised_premises"]:
@@ -65,7 +64,6 @@ def map_status(row):
         out["gis_final_coverage_date"] = (row.get("bduk_gis_final_coverage_date") or "").strip()
         out["gis_contract_scope"] = (row.get("bduk_gis_contract_scope") or "").strip()
         out["gis_contract_name"] = (row.get("bduk_gis_contract_name") or "").strip()
-        out["gis_confirmation"] = "not yet confirmed" if subsidy == UNDER_REVIEW else "confirmed"
     elif out["future_gigabit"]:
         out["status"] = PLANNED_COMMERCIAL
     else:
@@ -95,7 +93,7 @@ def summarise(records, postcodes):
         by_postcode.setdefault(r["postcode"], {s: 0 for s, _ in STATUSES})[r["status"]] += 1
         if r["status"] == PLANNED_GIS:
             gis["premises"] += 1
-            gis["under_review"] += r["gis_confirmation"] == "not yet confirmed"
+            gis["under_review"] += r["subsidy_control_status"] == UNDER_REVIEW
             gis["suppliers"].add(r["gis_supplier"])
             gis["final_coverage_dates"].add(r["gis_final_coverage_date"])
             gis["contract_scopes"].add(r["gis_contract_scope"])

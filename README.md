@@ -30,7 +30,7 @@ Applied in this order; the first rule that matches wins.
 |---|------|--------|
 | 1 | `bduk_recognised_premises` is false | **Not counted by BDUK** |
 | 2 | `current_gigabit` is true | **Available now** (voucher supplier recorded if `bduk_vouchers` is true) |
-| 3 | `bduk_gis` is true | **Planned – Project Gigabit** (supplier, final coverage date, contract scope; `Gigabit Under Review` is flagged "not yet confirmed") |
+| 3 | `bduk_gis` is true | **Planned – Project Gigabit** (supplier, final coverage date, contract scope) |
 | 4 | `future_gigabit` is true | **Planned – commercial** |
 | 5 | otherwise | **Not planned** (`Gigabit White` is noted as eligible for public subsidy) |
 
@@ -38,7 +38,7 @@ Applied in this order; the first rule that matches wins.
 
 ## Caveats
 
-BDUK plans are provisional. Premises under review may be removed from Project Gigabit scope, dates can change, and BDUK does not guarantee the accuracy of the data. The site says so, and links to the [official checker](https://www.check-gigabit-broadband-availability.service.gov.uk/) for individual addresses.
+BDUK plans are provisional. Dates can change, and BDUK does not guarantee the accuracy of the data. The site says so, and links to the [official checker](https://www.check-gigabit-broadband-availability.service.gov.uk/) for individual addresses.
 
 Every weekly run writes `data/last_check.json` (and a copy in `docs/data/`) with the time of the check, so the site's "Last checked" date is genuine and the run always makes a small commit. Data files only change when there is a new release.
 
