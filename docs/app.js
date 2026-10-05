@@ -79,10 +79,10 @@
     box.appendChild(el("p", { text: g.premises + " premises are in a Project Gigabit plan. Supplier: " + join(g.suppliers) +
       ". Contract scope: " + join(g.contract_scopes) + ". Final coverage date: " +
       g.final_coverage_dates.map(fmtDate).join(", ") + "." }));
-    if (g.under_review) {
-      box.appendChild(el("p", { text: g.under_review + " of these are marked “Gigabit Under Review” and are not yet confirmed: they could be removed from the plan." }));
-    } else {
-      box.appendChild(el("p", { text: "None of these are currently marked as under review." }));
+    if (g.under_review && g.under_review === g.premises) {
+      box.appendChild(el("p", { text: "All " + g.under_review + " are classed “Gigabit Under Review” in the BDUK data." }));
+    } else if (g.under_review) {
+      box.appendChild(el("p", { text: g.under_review + " of these are classed “Gigabit Under Review” in the BDUK data." }));
     }
     if (s.vouchers.length) {
       box.appendChild(el("p", { text: "Gigabit voucher connections on record: " + s.vouchers.map(function (v) {

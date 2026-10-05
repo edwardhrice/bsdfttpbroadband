@@ -22,7 +22,7 @@ def detail(r):
         bits.append(f"voucher supplier: {r['voucher_supplier']}")
     if r["gis_supplier"]:
         bits.append(f"{r['gis_supplier']}, final coverage {r['gis_final_coverage_date']}, "
-                    f"{r['gis_contract_scope']} scope, {r['gis_confirmation']}")
+                    f"{r['gis_contract_scope']} scope")
     if r["subsidy_note"]:
         bits.append(r["subsidy_note"])
     return "; ".join(bits)

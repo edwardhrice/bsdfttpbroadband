@@ -45,7 +45,7 @@ class StatusMapping(unittest.TestCase):
         r = map_status(raw(current_gigabit="true", bduk_vouchers_supplier="Ignored"))
         self.assertEqual(r["voucher_supplier"], "")
 
-    def test_project_gigabit_details_and_under_review_flag(self):
+    def test_project_gigabit_details_keep_subsidy_classification(self):
         gis = dict(bduk_gis="true", bduk_gis_supplier="Wessex Internet Ltd",
                    bduk_gis_final_coverage_date="2029-09-30", bduk_gis_contract_scope="Initial",
                    future_gigabit="true")
@@ -53,8 +53,8 @@ class StatusMapping(unittest.TestCase):
         self.assertEqual(r["status"], PLANNED_GIS)
         self.assertEqual((r["gis_supplier"], r["gis_final_coverage_date"], r["gis_contract_scope"]),
                          ("Wessex Internet Ltd", "2029-09-30", "Initial"))
-        self.assertEqual(r["gis_confirmation"], "not yet confirmed")
-        self.assertEqual(map_status(raw(**gis))["gis_confirmation"], "confirmed")
+        self.assertNotIn("gis_confirmation", r)
+        self.assertEqual(r["subsidy_control_status"], "Gigabit Under Review")
 
     def test_commercial_plan(self):
         self.assertEqual(map_status(raw(future_gigabit="true"))["status"], PLANNED_COMMERCIAL)
