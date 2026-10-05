@@ -5,7 +5,7 @@
     { key: "Available now", slug: "available_now", color: "var(--c-available)",
       def: "BDUK's data says the premises can already get a gigabit-capable connection." },
     { key: "Planned – Project Gigabit", slug: "planned_project_gigabit", color: "var(--c-gis)",
-      def: "Included in a government-funded Project Gigabit contract. The supplier, scope and final coverage date are shown below." },
+      def: "Included in a government-funded Project Gigabit contract." },
     { key: "Planned – commercial", slug: "planned_commercial", color: "var(--c-commercial)",
       def: "A broadband company has said it plans to build gigabit coverage here without public money." },
     { key: "Not planned", slug: "not_planned", color: "var(--c-notplanned)",
